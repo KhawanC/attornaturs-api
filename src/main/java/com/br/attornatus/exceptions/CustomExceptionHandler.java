@@ -44,4 +44,13 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 
 		return new ResponseEntity<>(exceptionResponse, HttpStatus.NOT_FOUND);
 	}
+	
+	@ExceptionHandler(EnderecoException.class)
+	public final ResponseEntity<ExceptionResponseDTO> handleEnderecoException(Exception ex, WebRequest request) {
+		ExceptionResponseDTO exceptionResponse = new ExceptionResponseDTO(
+				LocalDateTime.now(ZoneId.of("America/Sao_Paulo")).toString(), ex.getMessage(),
+				request.getDescription(false), HttpStatus.BAD_REQUEST, HttpStatus.BAD_REQUEST.value());
+
+		return new ResponseEntity<>(exceptionResponse, HttpStatus.BAD_REQUEST);
+	}
 }
