@@ -2,20 +2,29 @@ package com.br.attornatus.DTO;
 
 import java.util.UUID;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 public class EnderecoResponseDTO {
 
+	@Schema(type = "UUID", example = "c60ee91a-24de-4d58-87ee-1ff0c44c3ca5", description = "Id do endereço")
 	private UUID id;
 
+	@Schema(type = "string", example = "Minha casa", description = "Apelido para o endereço")
 	private String apelido;
 
+	@Schema(type = "string", example = "Rua josé")
 	private String logradouro;
 
+	@Schema(type = "string", example = "00000-000")
 	private String cep;
 
+	@Schema(type = "integer", example = "1")
 	private Integer numero;
 
+	@Schema(type = "string", example = "Rio de Janeiro")
 	private String cidade;
 
+	@Schema(type = "boolena", example = "true", description = "Booleano para indicar se o endereço é o principal do usuário")
 	private Boolean principal;
 
 	public EnderecoResponseDTO() {

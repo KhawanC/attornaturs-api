@@ -39,4 +39,9 @@ public class PessoaRequestDTO {
 		this.dataNascimento = dataNascimento;
 	}
 
+	@Override
+	public String toString() {
+		return "PessoaRequestDTO [nome=" + nome + ", dataNascimento=" + dataNascimento + "]";
+	}
+
 }

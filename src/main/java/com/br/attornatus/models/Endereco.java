@@ -48,9 +48,8 @@ public class Endereco {
 	public Endereco() {
 	}
 
-	public Endereco(UUID id, String apelido, Pessoa pessoa, String logradouro, String cep, Integer numero,
+	public Endereco(String apelido, Pessoa pessoa, String logradouro, String cep, Integer numero,
 			String cidade, Boolean principal) {
-		this.id = id;
 		this.apelido = apelido;
 		this.pessoa = pessoa;
 		this.logradouro = logradouro;

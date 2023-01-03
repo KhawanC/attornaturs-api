@@ -43,8 +43,7 @@ public class Pessoa {
 	public Pessoa() {
 	}
 
-	public Pessoa(UUID id, String nome, Date dataNascimento, List<Endereco> enderecos) {
-		this.id = id;
+	public Pessoa(String nome, Date dataNascimento, List<Endereco> enderecos) {
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.enderecos = enderecos;
@@ -81,5 +80,4 @@ public class Pessoa {
 	public void setEnderecos(List<Endereco> enderecos) {
 		this.enderecos = enderecos;
 	}
-
 }

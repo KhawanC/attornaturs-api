@@ -14,7 +14,7 @@
 	<name>attornatus-api</name>
 	<description>API para o gerenciamento de pessoas. Avaliação de desenvolvimento backend</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		
@@ -51,6 +51,12 @@
 			<artifactId>springdoc-openapi-ui</artifactId>
 			<version>1.6.14</version>
 		</dependency>
+		
+		<dependency>
+	        <groupId>org.junit.jupiter</groupId>
+	        <artifactId>junit-jupiter-engine</artifactId>
+	        <scope>test</scope>
+    	</dependency>
 		
 	</dependencies>
 
